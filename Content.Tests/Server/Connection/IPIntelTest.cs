@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -197,6 +197,7 @@ public static class IPIntelTest
         var resp = await ipIntel.QueryIPIntelRateLimited(TestIp);
         Assert.That(resp.Code, Is.EqualTo(IPIntel.IPIntelResultCode.Errored));
     }
+
 
     [Test]
     [TestCase("0.0.0.0", ExpectedResult = true)]
